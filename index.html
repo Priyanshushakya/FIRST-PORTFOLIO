@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu Shakya | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-primary">Priyanshu Shakya</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="scrollToSection('home')"
+                        class="text-gray-600 hover:text-primary transition-colors">Home</button>
+                    <button onclick="scrollToSection('about')"
+                        class="text-gray-600 hover:text-primary transition-colors">About</button>
+                    <button onclick="scrollToSection('projects')"
+                        class="text-gray-600 hover:text-primary transition-colors">Projects</button>
+                    <button onclick="scrollToSection('skills')"
+                        class="text-gray-600 hover:text-primary transition-colors">Skills</button>
+                    <button onclick="scrollToSection('contact')"
+                        class="text-gray-600 hover:text-primary transition-colors">Contact</button>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <button onclick="scrollToSection('home')"
+                    class="block px-3 py-2 text-gray-600 hover:text-primary">Home</button>
+                <button onclick="scrollToSection('about')"
+                    class="block px-3 py-2 text-gray-600 hover:text-primary">About</button>
+                <button onclick="scrollToSection('projects')"
+                    class="block px-3 py-2 text-gray-600 hover:text-primary">Projects</button>
+                <button onclick="scrollToSection('skills')"
+                    class="block px-3 py-2 text-gray-600 hover:text-primary">Skills</button>
+                <button onclick="scrollToSection('contact')"
+                    class="block px-3 py-2 text-gray-600 hover:text-primary">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight ">
+                        Hi, I'm <span class="text-blue-800">Priyanshu Shakya</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-white mt-4 opacity-90">
+                        Full Stack Developer & UI/UX Designer
+                    </h2>
+                    <p class="text-lg text-white mt-6 opacity-80 max-w-lg">
+                        I build responsive, user-friendly web applications using technologies like React, Tailwind CSS,
+                        and Node.js. My focus is on creating clean interfaces, smooth functionality, and meaningful
+                        digital experiences.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <button onclick="scrollToSection('projects')"
+                            class="px-8 py-3 bg-white text-primary font-medium rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+                            View My Work
+                        </button>
+                        <button onclick="scrollToSection('contact')"
+                            class="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex justify-center animate-fade-in">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-white/20 rounded-full flex items-center justify-center">
+                            <img src="my photo.png" alt="Priyanshu Shakya"
+                                class="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-white shadow-xl object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- About Text -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-dark mb-6">My Journey</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I’m a passionate <span class="font-semibold text-primary">Frontend Developer</span>, currently
+                        exploring how ideas turn into real web experiences.
+                        My journey started with a curiosity for how design and code work together to build interactive
+                        websites.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I’ve started learning <span class="font-medium">HTML, CSS, JavaScript, Tailwind CSS, and
+                            React</span>, and I’m currently working on my first project — a <span
+                            class="font-semibold">To-Do List App</span> — to strengthen my skills.
+                        My focus right now is on writing clean code, building responsive layouts, and understanding the
+                        logic behind real-world web applications.
+                    </p>
+
+                    <!-- Skills List -->
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Frontend Development</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>UI/UX Learning</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-3"></i>
+                            <span>Continuous Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-3xl font-bold text-primary mb-2">1</div>
+                        <div class="text-gray-600">Project in Progress</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-3xl font-bold text-primary mb-2">6+</div>
+                        <div class="text-gray-600">Technologies Learned</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-3xl font-bold text-primary mb-2">100%</div>
+                        <div class="text-gray-600">Learning Dedication</div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-3xl font-bold text-primary mb-2">∞</div>
+                        <div class="text-gray-600">Growth Mindset</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Featured Projects</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Here are some of my recent works that showcase my skills and expertise in various domains.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover project-card">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-dark mb-2">Todo List</h3>
+                        <p class="text-gray-600 mb-4">
+                            A React-based To-Do List app to add, edit, and manage daily tasks with an interactive and
+                            clean user interface.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">React</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Node.js</span>
+                        </div>
+                        <button class="text-primary font-medium hover:text-secondary transition-colors">
+                            View Details <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-secondary transition-colors shadow-lg">
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">My Skills</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    I've developed expertise across multiple technologies and tools to deliver comprehensive solutions.
+                </p>
+            </div>
+            <section class="py-12 px-6">
+
+                <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+
+                    <!-- HTML -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML" class="w-12 mx-auto mb-3">
+                        <p class="font-medium">HTML</p>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"
+                            class="w-12 mx-auto mb-3">
+                        <p class="font-medium">CSS</p>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript" class="w-12 mx-auto mb-3">
+                        <p class="font-medium">JavaScript</p>
+                    </div>
+
+                    <!-- Tailwind -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                            alt="Tailwind CSS" class="w-12 mx-auto mb-3">
+                        <p class="font-medium">Tailwind</p>
+                    </div>
+
+                    <!-- React -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React" class="w-12 mx-auto mb-3">
+                        <p class="font-medium">React</p>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" class="w-12 mx-auto mb-3">
+                        <p class="font-medium">GitHub</p>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js" class="w-12 mx-auto mb-3">
+                        <p class="font-medium">Node.js</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Get In Touch</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-dark mb-6">Let's Connect</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        I'm always interested in new opportunities and exciting projects. Whether you're looking to
+                        collaborate on a product or just want to say hello, I'd love to hear from you.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-dark">Email</h4>
+                                <p class="text-gray-600">priyanshuetw2072003@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
+                                <i class="fab fa-linkedin text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-dark ">Linkedin</h4>
+                                <p class="text-gray-600"><a
+                                        href="http://www.linkedin.com/in/priyanshu-shakya-a1b662245">click Here</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-dark">Location</h4>
+                                <p class="text-gray-600">Noida sector-15, Uttar Pradesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-dark mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Priyanshushakya"
+                                class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-github text-gray-700"></i>
+                            </a>
+                            <a href="http://www.linkedin.com/in/priyanshu-shakya-a1b662245"
+                                class="bg-white p-3 rounded-full shadow-sm hover:shadow-md transition-shadow">
+                                <i class="fab fa-linkedin-in text-gray-700"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-secondary transition-colors shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Priyanshu Shakya</h3>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+                    Creating innovative digital solutions that make a difference in people's lives.
+                </p>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">
+                        © 2025 Priyanshu Shakya. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
